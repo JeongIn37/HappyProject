@@ -9,7 +9,7 @@ POST /user/signup
 {
     "id": "happy",
     "password": "happy123",
-    "nickname": happy
+    "nickname": "happy"
 }
 ```
 
