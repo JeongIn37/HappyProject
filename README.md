@@ -31,7 +31,7 @@ POST /user/login
 ```json
 {
     "id": "happy",
-    "password": "True",
+    "password": "happy123",
 }
 ```
 - Response
