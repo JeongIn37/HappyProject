@@ -10,7 +10,7 @@ class UserManager(BaseUserManager):
             id=id,
             nickname=nickname,
         )
-        user.set_password(password)
+        user.set_password(password) # 회원가입 시 받은 비밀번호를 hash하여 저장
         user.save(using=self._db)
         return user
 
@@ -34,7 +34,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_length=50,
         unique=True,
     )
-    age = models.PositiveIntegerField
     is_superuser = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
